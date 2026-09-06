@@ -1,0 +1,6 @@
+{
+  "name": "Unfold - AI Reflection & Personal Growth Journal",
+  "description": "User-authenticated personal reflection and brainstorming journal powered by Gemini 3.6 Flash and Cloud Firestore with secure user data isolation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
