@@ -24,7 +24,7 @@ Recommended Browser: Google Chrome or Chromium-based browsers on desktop for opt
 | :--- | :--- | :--- |
 | **Input Surfaces** | Malicious injection payloads, oversized requests, runaway API costs. | Express top-level payload deserialization capped at 10MB; 20-turn session limits to prevent quota exhaustion. |
 | **Planning & Reasoning** | Prompt hijacking, conversational transcript leakage. | Explicit system instruction boundaries treating history as raw data; strict JSON schema enforcement for structured synthesis and emoji extraction. |
-| **Server / Key Security** | Gemini API key exposure in client network requests. | Zero client-side API key exposure. All AI requests proxy server-side via `server.ts` with credentials retrieved from environment variables or Google Cloud Secret Manager. |
+| **Server / Key Security** | Gemini API key exposure in client network requests. | Zero client-side API key exposure. All AI requests proxy server-side via `server.ts` with credentials retrieved from environment variables or Google Cloud Secret Manager. Gemini routes require a valid Firebase ID token, so only authenticated users can invoke them.|
 | **Memory & State (Firestore)** | Unauthorized cross-user data access, runtime write crashes. | Owner-bound Firestore security rules (`request.auth.uid == userId`) enforcing tenant boundary isolation; payload sanitizer stripping `undefined` fields before mutations. |
 | **Authentication** | Credential theft, phishing, password database compromise. | Google Federated OAuth via Firebase Authentication; zero password storage or handling in application codebase. |
 
