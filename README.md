@@ -2,7 +2,6 @@
 
 **Unfold** is a personal growth and cognitive journaling web application powered by **Google Gemini API** and **Google Cloud Firestore**. It provides a safe space for voice or text reflection, transforms sessions into interactive **Emoji Summary** visual narratives, tracks scheduled milestones linked directly to Google Calendar, and uncovers past reflections using semantic vector search.
 
-* **Live Cloud Run App:** `https://reflectai-journal-reflection-assistant-449515877581.asia-southeast1.run.app`
 * **AI Studio Custom Domain:** `https://unfold.ai.studio`
 * **Target Region:** APAC (`asia-southeast1`)
 * **Cloud Run Challenge Label:** `dev-tutorial=cloud-run-ai-challenge`
